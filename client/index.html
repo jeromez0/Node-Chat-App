@@ -1,0 +1,69 @@
+<script src="/socket.io/socket.io.js"></script>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>The Node/Express Chat Application</title>
+        <link href = "/client/main.css" rel = "stylesheet" type = "text/css"/>
+    </head>
+
+    <body>
+        <div class = "chatContainer">
+            <h2>Chat box</h2>
+
+            <div class = "chatBox" id = "chat-text">
+                stuff
+            </div>
+            <form id = "chat-form">
+                <input id = "chat-input" type = "text" style = "width: 60%; height: 20px; margin-left: 5%; margin-bottom: 5%" autocomplete="off"/>
+                <input class = "btn" type = "submit" value = "Send" style = "margin-left: 5%"/>
+            </form>
+
+        </div>
+
+        <div class = "mainContainer">
+            <div>
+                <h2>Main container</h2>
+                
+                <nav>
+                    <ul>
+                        <li>Home Page</li>
+                        <li>About Us</li>
+                        <li>Third Page</li>
+                        <li>Page 4 </li>
+                        <li>Page 5</li>
+                    </ul>
+                </nav>
+
+            </div>
+        </div>
+
+
+    </body>
+</html>
+
+<script>
+ 
+    var chatText = document.getElementById('chat-text');
+    var chatInput = document.getElementById('chat-input');
+    var chatForm = document.getElementById('chat-form');
+
+    var socket = io();
+    var typing = false;
+    
+    //add a chat cell to our chat list view, and scroll to the bottom
+    socket.on('addToChat',function(data){  
+      console.log('got a chat message');
+      chatText.innerHTML += '<div class="chatCell">' + data + '</div>';
+      chatText.scrollTop = chatText.scrollHeight;   
+    });
+    
+    chatForm.onsubmit = function(e){
+      //prevent the form from refreshing the page
+        e.preventDefault();
+        //call sendMsgToServer socket function, with form text value as argument
+        socket.emit('sendMsgToServer', chatInput.value);
+        chatInput.value = "";
+ }
+ 
+</script>

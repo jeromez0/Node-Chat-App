@@ -1,0 +1,60 @@
+body{
+    background:paleturquoise;
+}
+
+.chatContainer{
+    background: white;
+    width: 30%;
+    height: 80%;
+    border-radius: 6px;
+    margin: 5% 1% 1% 3%;
+    float:left;
+    text-align: left;
+    font-family: 'pacifico';
+    box-shadow: 5px 5px 10px;
+}
+
+.chatContainer h2{
+   margin-left: 5%; 
+}
+
+.chatBox{
+    border-radius: 5px;
+    width: 80%;
+    height: 60%;
+    margin: 5% auto 5% auto;
+    border: 2px solid;
+    border-color: black;
+    overflow-y: scroll;
+}
+
+.mainContainer {
+    background: white;
+    width: 55%;
+    height: 1000px;
+    float: right;
+    margin-right: 10%;
+}
+
+.mainContainer h2{
+    font-size: 36px;
+}
+
+.mainContainer ul {
+    float: right;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: gainsboro;
+}
+
+.mainContainer li{
+    display: block;
+    padding: 20px 20px;
+    color: blue;
+}
+
+.mainContainer li:hover{
+    color: greenyellow;
+}
