@@ -8,36 +8,51 @@
     </head>
 
     <body>
+
+        <div class = "NavBar">
+            <div>
+                <nav>
+                    <ul>
+                        <li style = "font-family: pacifico; margin-top: -.4%">The Node Chat Application</li>
+                        <li><a href = "index.html">Home Page</a></li>
+                        <li><a href = "page2">Cool Stuff</a></li>
+                        <li><a href = "page3">About Us</a></li>
+                        <li><a href = "page4">Contact</a></li>
+                        <input type = "text" placeholder = "Search.." style = "margin-top: .8%; padding: 7px; margin-left: 20%;"/>
+                        <button type="submit" style = "top: 20px;padding: 7px 7px; cursor: pointer; ">Submit</button>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <div class = "mainContainer">
+            <div>
+                <marquee behavior = "slide" direction = "down" loop = 1 style = "font-family: 'pacifico'; font-weight:normal">Unleash your potential</marquee>
+                <img id = "img1" src = "https://64.media.tumblr.com/4e15e18cfe1bb896d09aed151175bd79/tumblr_nty9uxN7VI1u8wonlo1_500.jpg">
+            
+                <div class  = "side-panel">
+                    <h1 style = "font-family: Ubuntu">Hello! Welcome to the Node Chat Application.</h1>
+                    <p style = "font-family: Ubuntu">This is where I like to meditate on creative thoughts.</p>
+                    <p style = "font-family: Ubuntu">The chat box is fully functional; try it yourself!</p>
+
+                </div>
+
+            </div>
+        </div>
+
         <div class = "chatContainer">
+
             <h2>Chat box</h2>
 
             <div class = "chatBox" id = "chat-text">
                 stuff
             </div>
             <form id = "chat-form">
-                <input id = "chat-input" type = "text" style = "width: 60%; height: 20px; margin-left: 5%; margin-bottom: 5%" autocomplete="off"/>
-                <input class = "btn" type = "submit" value = "Send" style = "margin-left: 5%"/>
+                <input id = "chat-input" type = "text" style = "width: 63%; height: 40px; margin-left: 6%;" autocomplete="off"/>
+                <input class = "btn" type = "submit" value = "Send" style = "margin-top: 4%; margin-left: 5%; height: 40px; width: 70px"/>
             </form>
 
         </div>
-
-        <div class = "mainContainer">
-            <div>
-                <h2>Main container</h2>
-                
-                <nav>
-                    <ul>
-                        <li>Home Page</li>
-                        <li>About Us</li>
-                        <li>Third Page</li>
-                        <li>Page 4 </li>
-                        <li>Page 5</li>
-                    </ul>
-                </nav>
-
-            </div>
-        </div>
-
 
     </body>
 </html>
